@@ -1,0 +1,17 @@
+[
+    {
+       "SSN":110,
+    "name":"Reshma Gaikwad",
+    "gender":"Female",
+    "address":"pune",
+    "designation":"Software Developer",
+    "income":100,
+    "marital_status":"married",
+    "health_status":"BP",
+    "health_reason":"jjj",
+    "document":{
+        "document1":"abc",
+        "document2":"xyz"
+    }
+    }
+]

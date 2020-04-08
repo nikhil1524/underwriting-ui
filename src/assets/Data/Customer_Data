@@ -1,0 +1,87 @@
+[
+    {
+        "customer_id": 1;
+        "customer_name":"Reshma Gaikwad",
+        "address": {
+            "city":"pune",
+            "state":"maharashtra",
+        },
+        "mob_no": "9890380791",
+        "landline:"",
+        "age": 26,
+        "birthdate":"25-05-1993",
+        "gender": "femal",
+        "custome_enrollment_date":"05-05-2005"
+        "uw_submission_date":"10-12-2020",
+       " uw_bussiness_detail":{
+           "field1": "aaaa",
+           "field2": "bbbb",
+           "field3": "ggggg"
+       },
+       heath_details_present:y
+       "health_details":{
+           "bp": "lowBP",
+           "smoker": "no",
+           "alcoholic": "no",
+           "diabetic": "no",
+           "other_deseas": "no"
+       }
+    },
+    
+    {
+        "customer_id": 2;
+        "customer_name":"sona Gaikwad",
+        "address": {
+            "city":"pune",
+            "state":"maharashtra",
+        },
+        "mob_no": "9890380792",
+        "age": 25,
+        "birthdate":"26-05-1994",
+        "gender": "femal",
+        "custome_enrollment_date":"15-05-2015"
+        "uw_submission_date":"11-09-2020",
+       " uw_bussiness_detail":{
+           "field1": "aaaa",
+           "field2": "bbbb",
+           "field3": "ggggg"
+       },
+       heath_details_present:y
+       "health_details":{
+           "bp": "lowBP",
+           "smoker": "no",
+           "alcoholic": "no",
+           "diabetic": "no",
+           "other_deseas": "no"
+       }
+    },
+
+    {
+        "customer_id": 2;
+        "customer_name":"sona Gaikwad",
+        "address": {
+            "city":"pune",
+            "state":"maharashtra",
+        },
+        "mob_no": "9890380792",
+        "age": 25,
+        "birthdate":"26-05-1994",
+        "gender": "femal",
+        "custome_enrollment_date":"15-05-2015"
+        "uw_submission_date":"12-12-2020",
+       " uw_bussiness_detail":{
+           "field1": "aaaa",
+           "field2": "cccc",
+           "field3": "ggggg"
+       },
+       heath_details_present:y
+       "health_details":{
+           "bp": "lowBP",
+           "smoker": "no",
+           "alcoholic": "no",
+           "diabetic": "no",
+           "other_deseas": "no"
+       }
+    }
+
+]

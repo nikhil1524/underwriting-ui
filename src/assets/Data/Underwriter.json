@@ -1,0 +1,21 @@
+[
+    {
+"SSN":112,
+ "underwriting_id":1111,
+"underwriter_names":"Reshma Gaikwad",
+"underwriting_status":"verified",
+"description":"Customer is smoker.",
+"date": "2020-07-14 19:43:37 +0100",
+"ruleset_Version": 1,
+"underwriting_score": 7,
+"documents":"salary slip, document2, document4",
+"business_details":"hhhh",
+"business_type":"uuuu",
+"business_category":"xxx",
+"business_name":"jjjj",
+"business_acc":7665443333,
+"tax_id":8776,
+"business_address":"pune",
+"underwriter_Channel": "abc"
+}
+]

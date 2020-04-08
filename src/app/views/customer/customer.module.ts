@@ -2,15 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomerComponent } from './customer.component';
 import { AddComponent } from './add/add.component';
-import { SearchComponent } from './search/search.component';
 import { CustomerRoutingModule } from './customer-routing.module';
-import { BsDropdownModule } from 'ngx-bootstrap';
+import {SearchModule} from './search/search.module';
+import {UnderwritinghistoryModule} from './underwritinghistory/underwritinghistory.module'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [ CustomerComponent, AddComponent, SearchComponent ],
+  declarations: [ CustomerComponent, AddComponent ],
   imports: [
     CommonModule,
-    CustomerRoutingModule
+    CustomerRoutingModule,
+    SearchModule,
+    UnderwritinghistoryModule,
+    HttpClientModule
+    
   ]
 })
 export class CustomerModule { }
