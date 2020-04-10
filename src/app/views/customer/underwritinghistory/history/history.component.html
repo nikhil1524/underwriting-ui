@@ -1,0 +1,16 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header" id="yearDiv">
+      <ul>
+        <li *ngFor="let history of History" (click)="selectedyear(history)" [class.selected]="isSelected(history)">
+          <a>{{history.year}}</a></li>
+      </ul>
+      <div class="card-header-actions">
+        <span class="badge">SSN NO {{customer_id}}</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

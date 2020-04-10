@@ -1,0 +1,24 @@
+[
+    {
+        "SSN": 1,
+        "application_id": 56,
+        "discription": "xxxx",
+        "status":"completed",
+        "date": "2020-07-14 19:43:37 +0100",
+        "underwriter_id": 114,
+        "underwriter_name":"Reshma Gaikwad",
+        "verify_date":"2011-07-14 19:43:37 +0100",
+        "underwriting_status":"verified"
+    },  
+    {
+    "SSN": 1,
+        "application_id": 57,
+        "discription": "xxxx",
+        "status":"completed",
+        "date": "2020-07-14 19:43:37 +0100",
+        "underwriter_id": 114,
+        "underwriter_name":"Reshma Gaikwad",
+        "verify_date":"2011-07-14 19:43:37 +0100",
+        "underwriting_status":"verified"
+    }
+]

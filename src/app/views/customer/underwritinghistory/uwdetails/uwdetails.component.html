@@ -1,0 +1,27 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-body">
+        <div *ngFor="let underwriter of Underwriter ">
+                      <table>
+                        <tr><th>ID</th><td>{{underwriter.underwriting_id}}</td> </tr>
+                         <tr><th>Underwriter Name:</th><td>{{underwriter.underwriter_names}}</td></tr>
+                         <tr><th>Underwriting Status</th><td>{{underwriter.underwriting_status}}</td></tr>
+                         <tr><th>Short Description</th><td>{{underwriter.description}}</td></tr>
+                         <tr><th>Date</th><td>{{underwriter.date}}</td></tr>
+                         <tr><th>Ruleset Version</th><td>{{underwriter.ruleset_Version}}</td></tr>
+                         <tr><th>Underwriting Score</th><td>{{underwriter.underwriting_score}}</td></tr>
+                         <tr><th>Valid documents</th><td>{{underwriter.documents.document1}}</td></tr>
+                             <tr><th>Business Details:</th><td>{{underwriter.business_details}}</td></tr>
+                             <tr><th>Business Type:</th><td>{{underwriter.business_type}}</td></tr>
+                             <tr><th>Business Category:</th><td>{{underwriter.business_category}}</td></tr>
+                             <tr><th>Business Name:</th><td>{{underwriter.business_name}}</td></tr>
+                             <tr><th>Business Acc#</th><td>{{underwriter.business_acc}}</td></tr>
+                             <tr><th>Tax ID#</th><td>{{underwriter.tax_id}}</td></tr>
+                             <tr><th>Business Address</th><td>{{underwriter.business_address}}</td></tr>
+                             <tr><th>Underwriter Channel: </th><td>{{underwriter.underwriter_Channel}}</td></tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                 </div>
+      

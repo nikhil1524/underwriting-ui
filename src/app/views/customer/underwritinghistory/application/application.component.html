@@ -1,0 +1,32 @@
+<div class="animated fadeIn">
+    <div class="card">
+      <div class="card-body">
+<table class="table table-sm">
+    <thead><tr>
+        <th>Application ID</th>
+        <th>Short Description</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Underwriter ID</th>
+        <th>Underwriter Name</th>
+        <th>Verify Date</th>
+        <th> Underwriter Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let application of Application" (click)="showDetails(application)" [class.lastselected]="isSelected(application)">
+            <td>{{application.application_id}}</td>
+            <td>{{application.discription}}</td>
+            <td>{{application.status}}</td>
+            <td>{{application.date | date: 'dd/MM/yyyy'}}</td>
+            <td>{{application.underwriter_id}}</td>
+            <td>{{application.underwriter_name}}</td>
+            <td>{{application.verify_date | date: 'dd/MM/yyyy'}}</td>
+            <td><div class="alert alert-danger">{{application.underwriting_status}}</div></td>
+            </tr>
+            </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+<router-outlet></router-outlet>

@@ -1,1 +1,110 @@
-<p>search works!</p>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-8 col-md-6">
+<div class="input-group md-form form-sm form-2 pl-0" id="search">
+    <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search" #id>
+    <div class="input-group-append">
+      <span  (click)="showDetails(id)" class="input-group-text amber lighten-3" id="basic-text1" style="background-color: ffca28">
+            <i class="fa fa-search" aria-hidden="true"></i>
+         </span>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-8 col-md-6" id="details-items">
+    Customer ID : {{customer_id}}
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-8 col-md-6" id="details-items"> 
+    Customer Name: Reshma
+    </div> 
+    </div>
+  
+  <div class="row" id="btnbox">
+      <div class="col-sm-1 col-md-2"></div>
+      <div class="col-sm-10 col-md-8">
+          <form [formGroup]="radioGroupForm">
+              <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" formControlName="model">
+                <label ngbButtonLabel class="btn-primary">
+                  <input ngbButton type="radio" [value]="2020"> 2020
+                </label>
+                <label ngbButtonLabel class="btn-primary">
+                  <input ngbButton type="radio" value="2019"> 2019
+                </label>
+                <label ngbButtonLabel class="btn-primary">
+                  <input ngbButton type="radio" [value]="2018"> 2018
+                </label>
+                <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" [value]="2017"> 2017
+                  </label>
+                  <label ngbButtonLabel class="btn-primary">
+                      <input ngbButton type="radio" [value]="2016"> 2016
+                    </label>
+              </div>
+            </form>
+            <!-- <pre>{{radioGroupForm.value['model']}}</pre> -->
+            </div>
+          </div>
+              
+            <div class="row" id="dates">
+              <div class="col-sm-1 col-md-4"></div>
+                  <div class="col-sm-3 col-md-4">
+                    <ul class="list-group">
+                      <li class="list-group-item" (click)="onSelect(dept)">
+                        UW Submission Date: 25-02-2020
+                        </li>
+                        <li class="list-group-item" (click)="onSelect(dept)">
+                            UW Submission Date: 25-01-2020
+                          </li>
+                      </ul>
+                    </div>
+                    </div>
+
+                    <div class="details">
+
+          <div class="row">
+              <div class="col-sm-1 col-md-3"></div>
+              <div class="col-sm-3 col-md-2" id="details-items">
+            Customer Address details:
+                    </div>
+                    <div class="col-sm-3 col-md-4" id="details-items">
+                      <table>
+                        <tr><th>Full name</th><td>Reshma Gaikwad</td> </tr>
+                         <tr><th>Birth Date:</th><td>25-05-1993</td></tr>
+                         <tr><th>Age</th><td>26</td></tr>
+                        </table>
+                      </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-md-3"></div>
+                <div class="col-sm-3 col-md-2" id="details-items">
+              Customer Health Details
+                      </div>
+                      <div class="col-sm-3 col-md-4" id="details-items">
+                        <table>
+                          <tr><th>BP</th><td>low BP</td> </tr>
+                           <tr><th>Diabetic</th><td>no</td></tr>
+                           <tr><th>other</th><td>26</td></tr>
+                          </table>
+                        </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-1 col-md-3"></div>
+                  <div class="col-sm-3 col-md-2" id="details-items">
+                UW Bussiness Details
+                        </div>
+                        <div class="col-sm-3 col-md-4" id="details-items">
+                          <table>
+                            <tr><th>BP</th><td>low BP</td> </tr>
+                             <tr><th>Diabetic</th><td>no</td></tr>
+                             <tr><th>other</th><td>26</td></tr>
+                            </table>
+                          </div>
+                </div>
+
+                </div>

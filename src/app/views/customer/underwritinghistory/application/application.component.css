@@ -1,0 +1,17 @@
+.heading {
+    color: #73818f;
+    font-size: 20px;
+    padding: 1%;
+  }
+
+  .alert {
+    position: relative;
+    padding: 5px 1rem;
+    margin-bottom: 0;
+  }
+
+  .lastselected {
+    background-color: #2f353a;
+    color: bisque;
+    opacity: 0.5;
+  }

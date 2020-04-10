@@ -1,0 +1,52 @@
+ul {
+    list-style-type: none;
+    margin: 0px 0px -5px 0px;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  li {
+    float: left;
+    border-right: 1px solid #20a8d8;
+  }
+
+  
+  li a {
+    display: block;
+    color: #73818f;
+    text-align: center;
+    padding: 8px 25px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+ .card-header {
+   padding: 0;
+ }
+  
+  li a:hover:not(.active) {
+    background-color: #20a8d8;
+    color:white;
+  }
+
+  .card {
+    margin: 0;
+  }
+  
+  .selected a{
+    background-color: #2f353a;
+    color: bisque;
+    opacity: 0.5;
+  }
+
+  .selected a{
+    color: bisque;
+  }
+
+  .card-header-actions {
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
