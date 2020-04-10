@@ -28,7 +28,6 @@ export class UnderwritinghistoryComponent implements OnInit {
   }
 
   showDetails() {
-    this.submitted = true;
    this.customer_id=this.registerForm.get('search').value;
    this.router.navigate([this.customer_id], {relativeTo: this.route});
   }

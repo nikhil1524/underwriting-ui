@@ -1,23 +1,17 @@
 <div class="animated fadeIn">
-    
   <div class="card">
     <div class="card-header">
-      </div>
-      
-      <div class="card-body">
-   
-    <form [formGroup]="registerForm" (ngSubmit)="showDetails()" class="input-group md-form form-sm form-2 pl-0">
-         
-               <input  class="form-control my-0 py-1 amber-border" type="number" formControlName="search" placeholder="Enter SSN No." aria-label="Search" #id>
-                 <div class="input-group-append">
-                   <button type="submit" class="btn btn-block btn-danger">Search</button>
-                </div>
-            <div *ngIf="(registerFormControl.search.touched || submitted) && registerFormControl.search.errors?.required">
-             <div class="myalert">Please Enter SSN No.</div>
-            </div>
-           
+      <strong>Customer Search</strong>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="registerForm" (ngSubmit)="showDetails()" class="input-group md-form form-sm form-2 pl-0">
+        <input class="form-control my-0 py-1" type="number" formControlName="search" placeholder="Enter SSN No."
+          aria-label="Search" #id>
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-block btn-primary">Search</button>
+        </div>
       </form>
-</div>
-</div>
+    </div>
+  </div>
 </div>
 <router-outlet></router-outlet>

@@ -1,21 +1,29 @@
 <div class="animated fadeIn">
-    <div class="card">
-      <div class="card-header">
-<ul>
+  <!-- <div class="card">
+    <div class="card-header">
+      <ul>
         <li routerLinkActive="home" routerLinkActiveOptions="{exact: true}">
-            <a [routerLink]="['customer_info']">Customer Information</a>
-         </li>
-<li routerLinkActive="home" routerLinkActiveOptions="{exact: true}">
-    <a [routerLink]="['uw_details']">Underwriting Details</a></li>
+          <a [routerLink]="['customer_info']">Customer Information</a>
+        </li>
+        <li routerLinkActive="home" routerLinkActiveOptions="{exact: true}">
+          <a [routerLink]="['uw_details']">Underwriting Details</a></li>
 
-    <li  (click)="goApplication()">
-    <a>Application List</a></li>
-</ul>
-<div class="card-header-actions">
+        <li (click)="goApplication()">
+          <a>Application List</a></li>
+      </ul>
+      <div class="card-header-actions">
         <span class="badge">Application ID: {{application_id}}</span>
         <span class="badge"> Year: {{selected_year}}</span>
       </div>
-</div>
-</div>
-</div>
+    </div>
+  </div> -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a [routerLink]="['customer_info']" class="nav-link">Customer Information</a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['uw_details']" class="nav-link">Underwriting Details</a>
+    </li>
+  </ul>
+
 <router-outlet></router-outlet>

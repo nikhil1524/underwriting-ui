@@ -1,6 +1,6 @@
 ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0px 0px -5px 0px;
     padding: 0;
     overflow: hidden;
     display: inline-block;
@@ -8,7 +8,7 @@ ul {
   
   li {
     float: left;
-    border-right: 2px solid #20a8d8;
+    border-right: 1px solid #20a8d8;
   }
 
   
@@ -16,7 +16,7 @@ ul {
     display: block;
     color: #73818f;
     text-align: center;
-    padding: 14px 30px;
+    padding: 8px 25px;
     text-decoration: none;
     font-size: 15px;
   }
@@ -47,6 +47,6 @@ ul {
   .card-header-actions {
     display: inline-block;
     float: right;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-right: 10px;
 }
