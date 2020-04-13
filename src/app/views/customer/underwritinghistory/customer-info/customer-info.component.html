@@ -1,4 +1,4 @@
-<div class="animated fadeIn">
+<div class="animated fadeIn" *ngIf="Customer.length!==0">
   <div class="card">
     <div class="card-body">
       <div>
@@ -24,16 +24,20 @@
             <td>{{Customer.designation}}</td>
           </tr>
           <tr>
+            <th>Date of Birth</th>
+            <td>{{Customer.dob | date: 'dd-MM-yyyy'}}</td>
+          </tr>
+          <tr>
             <th>Marital Status</th>
-            <td>{{Customer.marital_status}}</td>
+            <td>{{Customer.maritalStatus}}</td>
           </tr>
           <tr>
             <th>Health Status</th>
-            <td>{{Customer.health_status}}</td>
+            <td>{{Customer.healthStatus}}</td>
           </tr>
           <tr>
             <th>Health Reason</th>
-            <td></td>
+            <td>{{Customer.healthReason}}</td>
           </tr>
           <tr>
             <th>document1</th>
