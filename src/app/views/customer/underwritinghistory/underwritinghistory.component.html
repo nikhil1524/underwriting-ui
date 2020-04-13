@@ -2,6 +2,9 @@
   <div class="card">
     <div class="card-header">
       <strong>Customer Search</strong>
+      <div class="card-header-actions">
+        <span class="badge"><app-loading></app-loading></span>
+      </div>
     </div>
     <div class="card-body">
       <form [formGroup]="registerForm" (ngSubmit)="showDetails()" class="input-group md-form form-sm form-2 pl-0">

@@ -17,6 +17,8 @@
       </div>
     </div>
   </div> -->
+  <div class="row">
+    <div class="col-md-11">
   <ul class="nav nav-tabs">
     <li class="nav-item">
       <a [routerLink]="['customer_info']" class="nav-link">Customer Information</a>
@@ -25,5 +27,11 @@
       <a [routerLink]="['uw_details']" class="nav-link">Underwriting Details</a>
     </li>
   </ul>
+  </div>
+  <div class="col-md-1">
+  <div class="card-header-actions"><button (click)="goApplication()" class="btn btn-block btn-primary">Back</button></div>
+  </div>
+  </div>
+  </div>
 
 <router-outlet></router-outlet>

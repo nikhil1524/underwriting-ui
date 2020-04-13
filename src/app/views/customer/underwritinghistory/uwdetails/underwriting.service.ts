@@ -1,19 +1,23 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { IUnderwriting } from './Underwriting';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {IUnderwriting} from './Underwriting';
+import {environment} from '../../../../../environments/environment';
 
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class UnderwriterService {
 
-  private _url: string = "/assets/Data/Underwriter.json";
+    private _url: string = '/assets/Data/Underwriter.json';
+    private url: string = environment.baseUrl;
 
-  constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) {
+    }
 
-  getUnderwriter(): Observable<IUnderwriting[]> {
-    return this.http.get<IUnderwriting[]>(this._url);
-  }
+    getUnderwriter(ssn, applicationId): Observable<IUnderwriting[]> {
+        console.log(this.url + ssn + '/app-details/' + applicationId);
+        return this.http.get<IUnderwriting[]>(this.url + ssn + '/app-details/' + applicationId);
+    }
 }

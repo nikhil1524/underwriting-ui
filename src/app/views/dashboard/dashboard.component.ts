@@ -3,7 +3,8 @@ import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 
 @Component({
-  templateUrl: 'dashboard.component.html'
+  templateUrl: 'dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
 
@@ -71,7 +72,7 @@ export class DashboardComponent implements OnInit {
   public lineChart2Data: Array<any> = [
     {
       data: [1, 18, 9, 17, 34, 22, 11],
-      label: 'Series A'
+      label: 'Count'
     }
   ];
   public lineChart2Labels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];

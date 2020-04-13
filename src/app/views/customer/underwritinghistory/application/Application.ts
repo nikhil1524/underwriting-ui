@@ -1,11 +1,10 @@
 export interface IApplication {
-    SSN: number,
-    application_id: number,
-    discription: string,
-    status:string,
+    applicationId: number,
     date: Date,
-    underwriter_id: number,
-    underwriter_name: string,
-    verify_date: Date,
-    underwriting_status: string
+    status: string,
+    description: string,
+    underwriterId: number,
+    underwriterName: number,
+    verifyDate: Date,
+    underwritingStatus: string
 }

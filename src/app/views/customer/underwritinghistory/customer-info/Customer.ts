@@ -1,10 +1,10 @@
 export interface ICustomer {
-    SSN:number,
-    application_id:number,
+    ssn:number,
     name:string,
     gender:string,
     address:string,
     designation:string,
+    dob:Date,
     income:string,
     marital_status:string,
     health_status:string,

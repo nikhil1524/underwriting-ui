@@ -1,44 +1,43 @@
 <div class="animated fadeIn">
   <div class="card">
     <div class="card-body">
-      <div *ngFor="let customer of Customer">
+      <div>
         <table>
           <tr>
             <th>SSN</th>
-            <td>{{customer.SSN}}</td>
+            <td>{{Customer.ssn}}</td>
           </tr>
           <tr>
             <th>Full name</th>
-            <td>{{customer.name}}</td>
+            <td>{{Customer.name}}</td>
           </tr>
           <tr>
             <th>Gender:</th>
-            <td>{{customer.gender}}</td>
+            <td>{{Customer.gender}}</td>
           </tr>
           <tr>
             <th>Address</th>
-            <td>{{customer.address}}</td>
+            <td>{{Customer.address}}</td>
           </tr>
           <tr>
             <th>Designation</th>
-            <td>{{customer.designation}}</td>
+            <td>{{Customer.designation}}</td>
           </tr>
           <tr>
             <th>Marital Status</th>
-            <td>{{customer.marital_status}}</td>
+            <td>{{Customer.marital_status}}</td>
           </tr>
           <tr>
             <th>Health Status</th>
-            <td>{{customer.health_status}}</td>
+            <td>{{Customer.health_status}}</td>
           </tr>
           <tr>
             <th>Health Reason</th>
-            <td>{{customer.health_reason}}</td>
+            <td></td>
           </tr>
           <tr>
             <th>document1</th>
-            <td>{{customer.document.document1}}</td>
-            <td>{{customer.document.document2}}</td>
+            <td></td>
           </tr>
         </table>
       </div>

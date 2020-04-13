@@ -16,24 +16,26 @@ const routes: Routes = [
       title: 'Customer'
     },
     children: [
+    
       {
         path: '',
-        redirectTo: 'search'
+        redirectTo: 'underwriting',
+        pathMatch: 'full',
       },
-      {
-        path: 'add',
-        component: AddComponent,
-        data: {
-          title: 'Customer Add'
-        }
-      },
-      {
-        path: 'search',
-        component: SearchComponent,
-        data: {
-          title: 'Customer Search'
-        },
-      },
+    // //   {
+    //     path: 'add',
+    //     component: AddComponent,
+    //     data: {
+    //       title: 'Customer Add'
+    //     }
+    //   },
+    //   {
+    //     path: 'search',
+    //     component: SearchComponent,
+    //     data: {
+    //       title: 'Customer Search'
+    //     },
+    //   },
       {
         path: 'underwriting',
         component: UnderwritinghistoryComponent,

@@ -1,16 +1,20 @@
 <div class="animated fadeIn">
-  <div class="card">
-    <div class="card-header" id="yearDiv">
-      <ul>
-        <li *ngFor="let history of History" (click)="selectedyear(history)" [class.selected]="isSelected(history)">
-          <a>{{history.year}}</a></li>
-      </ul>
-      <div class="card-header-actions">
-        <span class="badge">SSN NO {{customer_id}}</span>
-      </div>
+    <div class="card">
+        <div class="card-header" *ngIf="History.length !== 0; else loggedOut">
+            <ul>
+                <li *ngFor="let history of History" (click)="selectedyear(history)"
+                    [class.selected]="isSelected(history)">
+                    <a>{{history}}</a></li>
+            </ul>
+            <div class="card-header-actions">
+                <span class="badge">SSN NO {{customer_id}}</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <ng-template #loggedOut>
+                <div class="alert-danger">{{error}} .</div>
+            </ng-template>
+            <router-outlet></router-outlet>
+        </div>
     </div>
-    <div class="card-body">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
 </div>
