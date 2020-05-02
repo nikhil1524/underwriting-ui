@@ -14,25 +14,26 @@ import { LoaderComponent } from './loader/loader.component';
 import {LoaderService} from './loader/loader.service';
 import { LoaderInterceptor } from './loader/loader.interceptor';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
+import { HighlightDirective } from './Directive/highlight.directive';
+import { HealthStatusComponent } from './health-status/health-status.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HealthStatus } from './health-status/health-status.service';
+import { SafePipe } from './Pipe/safe.pipe';
 
 @NgModule({
-  // declarations: [UnderwritinghistoryComponent, HistoryComponent, 
-  //   ApplicationComponent, CustomerInfoComponent, UwdetailsComponent],
-    declarations: [routingComponents, CustomerDetailsComponent, LoaderComponent],
+   
+  declarations: [routingComponents, CustomerDetailsComponent, LoaderComponent, HighlightDirective, 
+    HealthStatusComponent, SafePipe],
   imports: [
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-   // BrowserAnimationsModule,
-    // MatProgressSpinnerModule,
     NgxSpinnerModule,
+    NgbModule,
     TabsModule.forRoot(),
   ],
-  providers: [LoaderService, { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }, ApplicationService, CustomerService, UnderwriterService, HistoryService]
+  providers: [LoaderService, { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }, ApplicationService, CustomerService, UnderwriterService, HistoryService, HealthStatus]
 })
 export class UnderwritinghistoryModule { }

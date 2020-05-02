@@ -16,15 +16,16 @@ export const navItems: INavData[] = [
     icon: 'icon-user'
   },
   {
-    name: 'Underwriting',
-    url: '/customer/underwriting',
-    icon: 'icon-pencil'
-  },
-  {
     name: 'Dashboard',
     url: '/dashboard',
     icon: 'icon-speedometer',
   },
+  {
+    name: 'Underwriting',
+    url: '/customer/underwriting',
+    icon: 'icon-pencil'
+  },
+  
   // {
   //   name: 'Search',
   //   url: '/customer/search',

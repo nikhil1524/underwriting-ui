@@ -10,8 +10,9 @@ export class CustomerDetailsComponent implements OnInit {
   customer_id;
   selected_year;
   application_id;
+  color="red";
 
-
+Diabetic: boolean = true;
   constructor( private router: Router,
                private route: ActivatedRoute) { }
 

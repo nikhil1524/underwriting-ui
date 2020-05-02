@@ -41,7 +41,7 @@ export class HistoryComponent implements OnInit {
                 }
             },
             err => {
-                this.error = 'server error' + err.value;
+                this.error = 'server error  ' + err.error.value;
             });
     }
 

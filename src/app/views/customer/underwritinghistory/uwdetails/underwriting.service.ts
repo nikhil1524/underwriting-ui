@@ -3,6 +3,8 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {IUnderwriting} from './Underwriting';
 import {environment} from '../../../../../environments/environment';
+import { IDocument } from './document';
+
 
 
 @Injectable({
@@ -19,5 +21,9 @@ export class UnderwriterService {
     getUnderwriter(ssn, applicationId): Observable<IUnderwriting[]> {
         console.log(this.url + ssn + '/app-details/' + applicationId);
         return this.http.get<IUnderwriting[]>(this.url + ssn + '/app-details/' + applicationId);
+    }
+
+    getDocuments(ssn, applicationId): Observable<IDocument[]> {
+       return this.http.get<IDocument[]>('/assets/Data/Document.json');
     }
 }

@@ -48,7 +48,7 @@ export class ApplicationComponent implements OnInit {
     }
 
     showDetails(application: IApplication) {
-        this.router.navigate([application.applicationId], {relativeTo: this.route});
+        this.router.navigate([application.applicationId + '/health_Status'], {relativeTo: this.route});
     }
 
     isSelected(application: IApplication) {

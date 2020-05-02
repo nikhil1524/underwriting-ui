@@ -1,0 +1,29 @@
+<div class="animated fadeIn">
+    <div class="card">
+      <div class="card-body">
+          <h6> Rulset Version: {{HealthStatus[0].RuleSetVersion}}</h6>
+          <i class="fas fa-smoking"></i>
+          <table class="table table-bordered">
+              <tr>
+                <th>Diesease</th>
+                <th>Points</th>
+                <th>Total Score </th>
+              </tr>
+              <tr *ngFor="let status of HealthStatus" appHighlight="{{status.Status}}">
+                <td>{{status.Diasease}} </td>
+                <td>{{status.VersionPoints}}</td>
+                  <td>{{status.Points}}</td>
+                   
+                </tr>
+                <tr style="background-color:#20a8d8; 
+                                border-color:#20a8d8; opacity:0.6">
+                                  <td><b>Total Score</b></td>
+                                  <td></td>
+                                  <td>66.66</td>
+                                  </tr>
+                </table>
+
+           
+          </div>
+          </div>
+</div>

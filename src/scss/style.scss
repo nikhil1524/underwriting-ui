@@ -8,3 +8,14 @@
 @import "custom";
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+.app-header .navbar-toggler {
+    margin: 5px;
+    background-color: beige;
+    border: 1px solid #73818f;
+}
+
+.app-header .navbar-brand {
+    width: 200px !important;
+}

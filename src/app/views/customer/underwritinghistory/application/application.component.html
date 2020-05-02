@@ -1,7 +1,7 @@
-<div class="animated fadeIn">
+<div class="animated fadeIn" *ngIf="Application.length!==0; else errordiv">
     <div class="card">
         <div class="card-body">
-            <table class="table table-sm" *ngIf="Application.length!==0; else errordiv">
+            <table class="table table-sm">
                 <thead>
                 <tr>
                     <th>Application ID</th>
@@ -30,10 +30,10 @@
                 </tr>
                 </tbody>
             </table>
-            <ng-template #errordiv>
-                <div id="err" class="alert-danger">{{error}}</div>
-            </ng-template>
         </div>
     </div>
 </div>
 <router-outlet></router-outlet>
+<ng-template #errordiv>
+        <div id="err" class="alert-danger">{{error}}</div>
+    </ng-template>

@@ -1,0 +1,20 @@
+[
+    {
+        "SSN": 1,
+    "applicationId": 5,
+    "DocumentName" : "Health Documents",
+    "Documentpath": "sample1"
+    },
+    {
+        "SSN": 1,
+    "applicationId": 5,
+    "DocumentName" : "Salary Slip",
+    "Documentpath": "salary1"
+    },
+    {
+        "SSN": 1,
+    "applicationId": 5,
+    "DocumentName" : "Identity Proof",
+    "Documentpath": "pan1"
+    }
+]

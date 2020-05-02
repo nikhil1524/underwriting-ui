@@ -8,6 +8,7 @@ import { ApplicationComponent } from './underwritinghistory/application/applicat
 import { CustomerInfoComponent } from './underwritinghistory/customer-info/customer-info.component';
 import { UwdetailsComponent } from './underwritinghistory/uwdetails/uwdetails.component';
 import { CustomerDetailsComponent } from './underwritinghistory/customer-details/customer-details.component';
+import { HealthStatusComponent } from './underwritinghistory/health-status/health-status.component';
 
 const routes: Routes = [
   {
@@ -22,20 +23,6 @@ const routes: Routes = [
         redirectTo: 'underwriting',
         pathMatch: 'full',
       },
-    // //   {
-    //     path: 'add',
-    //     component: AddComponent,
-    //     data: {
-    //       title: 'Customer Add'
-    //     }
-    //   },
-    //   {
-    //     path: 'search',
-    //     component: SearchComponent,
-    //     data: {
-    //       title: 'Customer Search'
-    //     },
-    //   },
       {
         path: 'underwriting',
         component: UnderwritinghistoryComponent,
@@ -76,8 +63,16 @@ const routes: Routes = [
                                component: UwdetailsComponent,
                                data: {
                                    title: 'UW Details'
+                               },
+                            },
+                               {
+                                   path: 'health_Status',
+                                   component: HealthStatusComponent,
+                                   data: {
+                                       title: 'Health Status'
+                                   },
                                }
-                           }
+                           
                         ]
                     }
                 ]

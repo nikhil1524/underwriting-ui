@@ -1,12 +1,9 @@
 <div class="animated fadeIn" *ngIf="Underwriter.length !== 0">
     <div class="card">
         <div class="card-body">
-            <div>
-                <table>
-                    <tr>
-                        <th>ID</th>
-                        <td>{{Underwriter.underwritingId}}</td>
-                    </tr>
+            <div class="row">
+                <div class="col-lg-6">
+                <table class="mytable">
                     <tr>
                         <th>Underwriter Name:</th>
                         <td>{{Underwriter.underwriterNames}}</td>
@@ -68,8 +65,40 @@
                         <td>{{Underwriter.underwriterChannel}}</td>
                     </tr>
                 </table>
+                </div>
+                
+                <div class="col-lg-6">
+                    <table>
+                        <tr *ngFor="let docs of document" style="padding-top:20px; ">
+                            <th>
+                            <a>{{docs.DocumentName}}</a>
+                            </th>
+                            <td>
+                            <button (click)="open(mymodal, docs)" class="btn btn-primary btn-sm">View</button>
+                            </td>
+                            <td>
+                            <button (click)="downloadPdf(docs)" class="btn btn-primary btn-sm">Download</button>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                <!-- <iframe src="assets/Documents/sample.pdf" style="width: 100%;height: 100%;border: none;"></iframe> -->
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<ng-template #mymodal let-modal>
+        <div class="modal-header">
+          <h6 class="modal-title" id="modal-basic-title">{{document_name}}</h6>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <iframe [src]="document_path | safe" style="width: 100%;height: 100%;border: none;"></iframe>
+        <!-- <iframe src="assets/Documents/pan1.pdf" style="width: 100%;height: 100%;border: none;"></iframe> -->
+        </div>
+      </ng-template>
       

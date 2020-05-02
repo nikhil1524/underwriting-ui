@@ -9,8 +9,12 @@
     margin-left: 1%;
    }
 
-   th, td{
+   th{
        padding: 2px 25px;
+   }
+
+   .mytable td {
+    padding: 2px 25px; 
    }
 
    tr{
@@ -22,4 +26,8 @@
     font-size: 20px;
     padding: 1%;
     text-align: center;
+  }
+
+  .modal-body {
+      height: 600px;
   }

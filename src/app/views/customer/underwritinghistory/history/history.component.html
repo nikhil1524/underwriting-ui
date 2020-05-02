@@ -1,6 +1,6 @@
 <div class="animated fadeIn">
-    <div class="card">
-        <div class="card-header" *ngIf="History.length !== 0; else loggedOut">
+    <div class="card" *ngIf="History.length !== 0; else loggedOut">
+        <div class="card-header">
             <ul>
                 <li *ngFor="let history of History" (click)="selectedyear(history)"
                     [class.selected]="isSelected(history)">
@@ -11,10 +11,11 @@
             </div>
         </div>
         <div class="card-body">
-            <ng-template #loggedOut>
-                <div class="alert-danger">{{error}} .</div>
-            </ng-template>
             <router-outlet></router-outlet>
         </div>
     </div>
 </div>
+
+<ng-template #loggedOut>
+        <div class="alert-danger">{{error}} .</div>
+    </ng-template>

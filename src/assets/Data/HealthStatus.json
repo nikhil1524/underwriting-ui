@@ -1,0 +1,38 @@
+[
+    {
+        "SSN": 1,
+        "applicationId": 5,
+        "RuleSetVersion": 1,
+        "Diasease": "Daibetic",
+        "Points":0.0,
+        "VersionPoints":33.33,
+        "Status":"false"
+    },
+    {
+        "SSN": 1,
+        "applicationId": 5,
+        "RuleSetVersion": 1,
+        "Diasease": "BP",
+        "Points":33.33,
+        "VersionPoints":33.33,
+        "Status":"true"
+    },
+    {
+        "SSN": 1,
+        "applicationId": 5,
+        "RuleSetVersion": 1,
+        "Diasease": "Asthama",
+        "Points":0.0,
+        "VersionPoints":33.33,
+        "Status":"false"
+    },
+    {
+        "SSN": 1,
+        "applicationId": 5,
+        "RuleSetVersion": 1,
+        "Diasease": "Alcoholic",
+        "Points":33.33,
+        "VersionPoints":33.33,
+        "Status":"true"
+    }
+]

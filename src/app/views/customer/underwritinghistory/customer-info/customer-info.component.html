@@ -1,8 +1,9 @@
 <div class="animated fadeIn" *ngIf="Customer.length!==0">
   <div class="card">
     <div class="card-body">
-      <div>
-        <table>
+      <div class="row">
+        <div class="col-md-6">
+        <table style="width:100%;">
           <tr>
             <th>SSN</th>
             <td>{{Customer.ssn}}</td>
@@ -44,6 +45,12 @@
             <td></td>
           </tr>
         </table>
+        </div>
+        <div class="col-md-1">
+          </div>
+          <div class="col-md-4">
+              <img src='assets/img/avatars/images.jpg'>
+          </div>
       </div>
     </div>
   </div>
