@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HealthStatus } from './health-status.service'
 import { IHealthStatus, rules} from './health-status';
 import {Router, ActivatedRoute, ParamMap} from '@angular/router';
-
+import { UnderwriterService } from '../uwdetails/underwriting.service';
+import { IUnderwriting } from '../uwdetails/Underwriting';
 @Component({
   selector: 'app-health-status',
   templateUrl: './health-status.component.html',
@@ -12,6 +13,7 @@ export class HealthStatusComponent implements OnInit {
 
   HealthStatus: IHealthStatus;
   Rules: rules[] =[];
+  Underwriter: IUnderwriting[] =[];
 
   customer_id;
   selected_year;
@@ -22,7 +24,8 @@ export class HealthStatusComponent implements OnInit {
   RulesetVersion;
 
   constructor( private service: HealthStatus,
-               private route: ActivatedRoute) { }
+               private route: ActivatedRoute,
+               private service2: UnderwriterService) { }
 
   ngOnInit(): void {
     this.getUrlData();
@@ -32,6 +35,7 @@ export class HealthStatusComponent implements OnInit {
       this.RulesetVersion=this.HealthStatus.rulesetVersion;
       
     });
+    this.getunderwriter();
 
   }
 
@@ -54,5 +58,11 @@ export class HealthStatusComponent implements OnInit {
       return false;
     }
   }
+
+  getunderwriter() {
+    this.service2.getUnderwriter(this.customer_id, this.application_id).subscribe((data) => {
+      this.Underwriter = data;
+    });
+      }
   
 }
