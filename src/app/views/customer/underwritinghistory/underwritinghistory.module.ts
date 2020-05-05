@@ -19,6 +19,7 @@ import { HealthStatusComponent } from './health-status/health-status.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HealthStatus } from './health-status/health-status.service';
 import { SafePipe } from './Pipe/safe.pipe';
+import { TotalScore } from './customer-details/TotalScore.service';
 
 @NgModule({
    
@@ -34,6 +35,7 @@ import { SafePipe } from './Pipe/safe.pipe';
     NgbModule,
     TabsModule.forRoot(),
   ],
-  providers: [LoaderService, { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }, ApplicationService, CustomerService, UnderwriterService, HistoryService, HealthStatus]
+  providers: [LoaderService, { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }, 
+    ApplicationService, CustomerService, UnderwriterService, HistoryService, HealthStatus, TotalScore]
 })
 export class UnderwritinghistoryModule { }

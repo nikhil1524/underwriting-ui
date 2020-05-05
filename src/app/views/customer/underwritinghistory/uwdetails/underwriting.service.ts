@@ -19,7 +19,7 @@ export class UnderwriterService {
     }
 
     getUnderwriter(ssn, applicationId): Observable<IUnderwriting[]> {
-        console.log(this.url + ssn + '/app-details/' + applicationId);
+        //console.log(this.url + ssn + '/app-details/' + applicationId);
         return this.http.get<IUnderwriting[]>(this.url + ssn + '/app-details/' + applicationId);
     }
 

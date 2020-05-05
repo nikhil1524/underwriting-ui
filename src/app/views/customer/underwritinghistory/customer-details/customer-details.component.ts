@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute, ParamMap} from '@angular/router';
+import {TotalScore} from './TotalScore.service'
+import {IHealthStatus, rules} from '../health-status/health-status';
+import {UnderwriterService} from '../uwdetails/underwriting.service';
+import {IUnderwriting} from '../uwdetails/Underwriting';
 
 @Component({
   selector: 'app-customer-details',
@@ -10,14 +14,20 @@ export class CustomerDetailsComponent implements OnInit {
   customer_id;
   selected_year;
   application_id;
-  color="red";
+  HealthStatus: IHealthStatus;
+  Underwriter: IUnderwriting[] =[];
+  score:number;
 
 Diabetic: boolean = true;
   constructor( private router: Router,
-               private route: ActivatedRoute) { }
+               private route: ActivatedRoute,
+              private service: UnderwriterService) { }
+
+             
 
   ngOnInit(): void {
-    this.getUrlData()
+    this.getUrlData();
+    this.getunderwriter();
   }
 
   getUrlData() {
@@ -35,5 +45,10 @@ Diabetic: boolean = true;
   this.router.navigate(["../", {applicationId: selectedId}], {relativeTo: this.route}); // Relative Path
   }
 
-
+  getunderwriter() {
+    this.service.getUnderwriter(this.customer_id, this.application_id).subscribe((data) => {
+      this.Underwriter = data;
+      console.log (this.Underwriter);
+    });
+      }
 }

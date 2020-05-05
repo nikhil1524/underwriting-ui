@@ -15,8 +15,7 @@ ngOnInit() {
 }
   
 highlight(status: string) {
-  console.log("status is" +status);
-    if(status == "true") {
+    if(status == "SUCCESS") {
     this.el.nativeElement.style.backgroundColor = 'red';
     this.el.nativeElement.style.opacity = '0.6';
     } else {

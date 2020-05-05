@@ -1,7 +1,7 @@
 <div class="animated fadeIn">
     <div class="card">
       <div class="card-body">
-          <h6> Rulset Version: {{HealthStatus[0].RuleSetVersion}}</h6>
+          <h6> Rulset Version: {{RulesetVersion}}</h6>
           <i class="fas fa-smoking"></i>
           <table class="table table-bordered">
               <tr>
@@ -9,10 +9,13 @@
                 <th>Points</th>
                 <th>Total Score </th>
               </tr>
-              <tr *ngFor="let status of HealthStatus" appHighlight="{{status.Status}}">
-                <td>{{status.Diasease}} </td>
-                <td>{{status.VersionPoints}}</td>
-                  <td>{{status.Points}}</td>
+              <tr *ngFor="let rules of Rules" appHighlight="{{rules.status}}">
+                <td>{{rules.name}} </td>
+                <td>{{rules.points}}</td>
+                  <td>
+                    <b *ngIf="checkStatus(rules); else score">{{rules.points}}</b>
+                    <ng-template #score>0.0</ng-template>
+                  </td>
                    
                 </tr>
                 <tr style="background-color:#20a8d8; 

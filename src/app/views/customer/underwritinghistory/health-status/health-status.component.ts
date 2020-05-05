@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HealthStatus } from './health-status.service'
-import { IHealthStatus } from './health-status';
+import { IHealthStatus, rules} from './health-status';
 import {Router, ActivatedRoute, ParamMap} from '@angular/router';
 
 @Component({
@@ -10,22 +10,28 @@ import {Router, ActivatedRoute, ParamMap} from '@angular/router';
 })
 export class HealthStatusComponent implements OnInit {
 
-  HealthStatus: IHealthStatus[] = [];
+  HealthStatus: IHealthStatus;
+  Rules: rules[] =[];
 
   customer_id;
   selected_year;
   application_id;
   closeResult: string;
   document_name: string;
+  score:string;
+  RulesetVersion;
 
   constructor( private service: HealthStatus,
                private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getUrlData();
     this.service.getData(this.customer_id, this.application_id).subscribe( data => {
       this.HealthStatus = data;
-      console.log(this.HealthStatus);
-    })
+      this.Rules=this.HealthStatus.rules;
+      this.RulesetVersion=this.HealthStatus.rulesetVersion;
+      
+    });
 
   }
 
@@ -39,5 +45,14 @@ export class HealthStatusComponent implements OnInit {
     });
   }
 
-
+  checkStatus(rules:rules): boolean{
+    if(rules.status=="SUCCESS")
+    {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  
 }
