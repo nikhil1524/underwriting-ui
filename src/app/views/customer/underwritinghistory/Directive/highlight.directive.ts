@@ -16,10 +16,10 @@ ngOnInit() {
   
 highlight(status: string) {
     if(status == "SUCCESS") {
-    this.el.nativeElement.style.backgroundColor = 'red';
+    this.el.nativeElement.style.backgroundColor = 'green';
     this.el.nativeElement.style.opacity = '0.6';
     } else {
-    this.el.nativeElement.style.backgroundColor = 'green';
+    this.el.nativeElement.style.backgroundColor = 'red';
     this.el.nativeElement.style.opacity = '0.6';
     } 
   }

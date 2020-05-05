@@ -13,8 +13,8 @@
                 <td>{{rules.name}} </td>
                 <td>{{rules.points}}</td>
                   <td>
-                    <b *ngIf="checkStatus(rules); else score">{{rules.points}}</b>
-                    <ng-template #score>0.0</ng-template>
+                    <b *ngIf="checkStatus(rules); else score">0.0</b>
+                    <ng-template #score>{{rules.points}}</ng-template>
                   </td>
                    
                 </tr>
